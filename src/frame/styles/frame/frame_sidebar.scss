@@ -1,0 +1,1170 @@
+$sidebar-prefix-cls: "#{$css-prefix}sidebar";
+$sidebarWrap-prefix-cls: "#{$sidebar-prefix-cls}-wrapper";
+
+.#{$sidebar-prefix-cls}-wrapper {
+  position: fixed;
+  z-index: 990;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  background: $sidebar-webkit-bgcolor-liner;
+  background: $sidebar-bgcolor-liner;
+  color: $sidebar-color;
+  width: $sidebar-base-width;
+  // margin-bottom: 30px;
+  // overflow-x: hidden;
+  // overflow-y: scroll;
+  @include user-select();
+  /* 滚动条 */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+    background-color: $scrollbar-bgcolor;
+  }
+
+  ::-webkit-scrollbar-track {
+    -webkit-box-shadow: none;
+    background-color: $scrollbar-bgcolor;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: $scrollbar-hover-color;
+  }
+}
+
+.#{$sidebar-prefix-cls} {
+  &-menu {
+    // padding-top: 100px;
+    height: 100%;
+    // overflow-y: auto;
+    // top: 50px;
+    width: 200px;
+    position: absolute;
+    box-shadow: 2px 0 5px 0 rgba(0,0,0,0.07);
+    background: $sidebar-menu-bgcolor;
+    // padding-bottom: 30px;
+    // overflow-y: scroll;
+    &-container{
+      overflow-x: hidden;
+      overflow-y: auto;
+      // height: 100%;
+      height: calc(100% - 80px);
+      //兼容火狐、ie去除滚动条
+      -ms-overflow-style:none;
+      scrollbar-width: none;
+    }
+    //首页工作台
+    &-home {
+      cursor: pointer;
+      &-li{
+        display: inline-block;
+        width: 100%;
+        color: $sidebar-color;
+        // padding: 0 12px;
+        text-align: left;
+        // border-left: 4px solid #fff;
+        line-height: 40px;
+        height: 40px;
+        .home-item{
+          width: 100%;
+            display: inline-block;
+            >a{
+              color: $text-color;
+              > .li-span {
+                margin-left: 5px;
+                display: inline-block;
+                white-space: nowrap;
+                // overflow: hidden;
+                text-overflow: ellipsis;
+                min-width: 120px;
+                font-size: $font-size-base;
+                color: $text-color;
+                line-height: 20px;
+                // vertical-align: 1px;
+                vertical-align: text-bottom;          
+                width: 120px;
+                word-break: keep-all;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+              }
+              > .li-first-i, .li-last-i {
+                color: $sidebar-menu-li-color;
+                display: inline-block;
+              }
+        
+              > .li-first-i {
+                margin-left: 21px;
+                width: 16px;
+              }
+              > .li-arrow-i {
+                color: $sidebar-menu-li-color;
+                font-size: $font-size-base;
+              }
+            }
+      
+            
+        }
+      }
+      &-li:hover{
+        color: $sidebar-color;
+        background-color: $h-sidebar-menu-active-bgcolor;
+        .home-item{
+          a{
+            .li-first-i:before {
+              color: #417BFD;
+            }
+            .li-span {
+              color: #417BFD;
+            }
+          }
+        }
+      }
+      .home-active{
+        .home-item{
+          color: #037DF3;
+          background-color: $h-sidebar-menu-active-bgcolor;
+          .li-first-i, .li-last-i, .li-span{
+            color: #037DF3;
+          }
+        }
+      }
+    }
+    //菜单
+    &-list {
+      cursor: pointer;
+      // overflow-x: hidden;
+      // overflow-y: auto;
+      // height: 100%;
+      &-li{
+        display: inline-block;
+        width: 100%;
+        color: $sidebar-color;
+        // padding: 0 12px;
+        text-align: left;
+        // border-left: 4px solid #fff;
+        line-height: 40px;
+        height: 40px;
+        .list-item{
+          .list-item-menu{
+            width: 100%;
+            display: inline-block;
+      
+            > .li-span {
+              margin-left: 5px;
+              display: inline-block;
+              white-space: nowrap;
+              // overflow: hidden;
+              text-overflow: ellipsis;
+              min-width: 120px;
+              font-size: $font-size-base;
+              color: $text-color;
+              line-height: 20px;
+              // vertical-align: 1px;
+              vertical-align: text-bottom;               
+              width: 120px;
+              word-break: keep-all;
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis;
+            }
+      
+            > .li-first-i, .li-last-i {
+              color:$list-item-i-color;
+              display: inline-block;
+            }
+      
+            > .li-first-i {
+              margin-left: 21px;
+              width: 16px;
+            }
+            > .li-arrow-i {
+              color: #747577;
+              font-size: $font-size-base;
+            }
+            // > .li-last-i:before{
+            //   border-radius: 3px 0px 0px 3px;
+            //   font-size: 20px;
+            // }
+          }
+        }
+        .list-tab{
+          // display: none;
+          visibility: hidden;
+          opacity: 0;
+          z-index: -9999;
+          // position: absolute;
+          .list-tab-panel{
+              padding: 10px 6px 30px 45px;
+              width: 950px;
+              height: auto;
+              background-color: $layout-menu-wrapper-bgcolor;
+              position: absolute;
+              left: 0px;
+              z-index: -1;
+              // border-radius: 4px;
+              -webkit-box-shadow: 0 0 8px 0 rgba(0,0,0,0.20);
+              box-shadow: 0 0 8px 0 rgba(0,0,0,0.20);
+              transition: left .4s ease-in-out;
+              // overflow-y: scroll;
+            // .list-tab-container::-webkit-scrollbar {
+            //   width: 10px;
+            //   height: 1px;
+            //   display: none;
+            // }
+            
+            // .list-tab-container::-webkit-scrollbar-thumb {
+            //   border-radius: 10px;
+            //   -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+            //   background: #348fe2;
+            // }
+            .list-tab-container{
+              width: 900px;
+              // float: left;
+              margin-top: 10px;
+              margin-right: 30px;
+              // height: 100%;
+              .list-search{
+                height: 28px;
+                line-height: 28px;
+                margin-bottom: 20px;
+                .h-input-group-prepend{
+                  background: transparent;
+                  border:none;
+                  border-radius: 0;
+                  border-bottom: 1px solid #D7DDE4;
+                  i{
+                    font-size: 18px;
+                    color: #969696;
+                  }
+                }
+                .h-input{
+                  padding-left: 0px;
+                  font-size: 14px;
+                  color: #999999;
+                  background: transparent;
+                  border:none;
+                  border-radius: none;
+                  box-shadow: none;
+                  border-bottom: 1px solid #D7DDE4;
+                }
+              }
+              .list-noSearched{
+                // height: 506px;
+                .list-noSearched-title{
+                  font-size: $font-size-base;
+                  color: $text-color;
+                }
+              }
+              .list-menu{
+                // height: 100px;
+                // overflow: scroll;
+                position: relative;
+                .list-container::-webkit-scrollbar {
+                    display: none;
+                  }
+                .list-container{
+                  float: left;
+                  // height: 500px;
+                  height: 100%;
+                  // max-height: 400px;
+                  // max-height: max-content;
+                  overflow-x: hidden;
+                  overflow-y: scroll;
+                  //兼容火狐去除滚动条
+                  scrollbar-width: none;
+                  .list-box{
+                    // border-top:1px solid #E6E6E6;
+                    /* 规定的列数，设置3列 */
+                    column-count: 3;
+                    /* 规定的间隔距离 */
+                    column-gap: 0;
+                    width: 690px;
+                    display: inline-block;
+                    padding: 8px 0;
+                    .item{
+                      /* 不允许插入任何中断 */
+                      break-inside: avoid;
+                      box-sizing: border-box;
+                      line-height: 30px;
+                      // padding: 10px;
+                      // margin-bottom: 30px; 
+                      // padding-top: 8px;
+                      // margin-top: 10px;
+                      // width: 100%;
+                      //只到三级菜单
+                      .list-box-indent{
+                        height: 100%;
+                        .menuLeaf{
+                          color: $text-color;
+                          // float: left;
+                          line-height: 14px;
+                          width: 225px;
+                          height: 30px;
+                          line-height: 30px;
+                          padding: 0 8px;
+                          margin-bottom: 0px;
+                          display: inline-block;
+                          vertical-align: middle;
+                          .menuLeaf-title{
+                            font-size: $font-size-base;
+                            color: $menuLeaf-title-color;
+                            line-height: 30px;
+                            width: 173px;
+                            display: inline-block;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            white-space: nowrap;
+                          }
+                          .menuLeaf-star{
+                            width: 20px;
+                            float: right;
+                            display: none;
+                            text-align:right;
+                            overflow: hidden;
+                          }
+                          .menuLeaf-coll{
+                            display: inline-block;
+                            color: #417BFD;
+                            i:before{
+                              content: "\e8ba";
+                            }
+                          }
+                        }
+                        .menuLeaf:hover {
+                          cursor: pointer;
+                          background: $h-sidebar-menu-active-bgcolor;
+                          border-radius: 2px;
+                          .menuLeaf-star{
+                            color: #417BFD;
+                            display: block;
+                          }
+                        }
+                        a:hover {
+                          color: #348fe2;
+                        }
+  
+                      }
+                      //只到四级菜单
+                      .list-box-nest{
+                        .list-box-nest-menu{
+                          color: $text-color;
+                          width: 225px;
+                          height: 28px;
+                          line-height: 28px;
+                          padding-right: 8px;
+                          display: inline-block;
+                          vertical-align: middle;
+                          .list-box-title{
+                            font-weight: bold;
+                            font-size: 13px;
+                            color: $text-color;
+                            height: 32px;
+                            line-height: 32px;
+                            padding: 0 8px;
+                            margin-bottom: 0px;
+                            display: inline-block;
+                            // border-bottom: 1px solid #E6E6E6;
+                          }
+                          .list-box-star{
+                            width: 20px;
+                            float: right;
+                            display: none;
+                            text-align:right;
+                          }
+                          .list-box-coll{
+                            display: inline-block;
+                            color:  #417BFD;
+                            i:before{
+                              content: "\e8ba";
+                            }
+                          }
+                        }
+                        .list-box-nest-menu:hover {
+                          cursor: pointer;
+                          border-radius: 2px;
+                          .list-box-star{
+                            color:  #417BFD;
+                            display: block;
+                          }
+                        }
+                        .list-box-menuLeaf{
+                          // height: 30px;
+                          .menuLeaf{
+                            color: $text-color;
+                            // float: left;
+                            width: 225px;
+                            height: 28px;
+                            line-height: 28px;
+                            padding: 0 8px;
+                            display: inline-block;
+                            vertical-align: middle;
+                            .menuLeaf-title{
+                              font-size: $font-size-base;
+                              width: 173px;
+                              color: $menuLeaf-title-color;
+                              line-height: 28px;
+                              display: inline-block;
+                              overflow: hidden;
+                              text-overflow: ellipsis;
+                              white-space: nowrap;
+                            }
+                            .menuLeaf-star{
+                              width: 20px;
+                              float: right;
+                              display: none;
+                              text-align:right;
+                              margin-right: 8px;
+                            }
+                            .menuLeaf-coll{
+                              display: inline-block;
+                              color:  #417BFD;
+                              i:before{
+                                content: "\e8ba";
+                              }
+                            }
+                          }
+                          .menuLeaf:hover {
+                            cursor: pointer;
+                            background: $h-sidebar-menu-active-bgcolor;
+                            border-radius: 2px;
+                            .menuLeaf-star{
+                              color:  #417BFD;
+                              display: block;
+                            }
+                          }
+                      
+                          a:hover {
+                            color: #348fe2;
+                          }
+                        }
+                      }
+                      //到五级菜单
+                      .list-box-direct{
+                        // border-top: 1px solid  #E6E6E6;
+                        width:225px;
+                        .list-box-direct-title{
+                          font-size: $font-size-base;
+                          color: $menuLeaf-title-color;
+                          width: 225px;
+                          height: 28px;
+                          line-height: 28px;
+                          padding: 0 8px;
+                          font-weight: bold;
+                          margin-bottom: 0px;
+                        }
+                        .list-box-direct-menu{
+                          height: 30px;
+                        }
+                      }
+                    }
+                    .menu-leaf-item, .more-fourth-menu-item{
+                      margin-bottom: 22px;
+                    }
+                  }
+                  .menu-search{
+                    .item{
+                      margin-bottom: 0px; 
+                    }
+                  }
+                }
+                
+                .list-tab-anx{
+                  float: right;
+                  width: 190px;
+                  // margin: 120px 0 0 0px;
+                  // height: 390px;
+                  height: auto;
+                  line-height: normal;
+                  // overflow: scroll;
+                  overflow-x: hidden;
+                  overflow-y: scroll;
+                  scrollbar-width: none;
+                  .list-tab-anx-item{
+                    color:  $menuLeaf-title-color;
+                    font-size: $font-size-base;
+                    height: 32px;
+                    width: 180px;
+                    line-height: 32px;
+                    padding: 8px;
+                    border-left: 1px solid #E6E6E6;
+                    white-space: nowrap;
+                  }
+                  .list-tab-anx-item:hover{
+                    color: #037DF3 ;
+                    border-left:1px solid #037DF3 ;
+                  }
+                  //锚点点击后样式
+                  .is-scroll{
+                    color: #037DF3 ;
+                    border-left:1px solid #037DF3 ;
+                  }
+                  .tab-anx-icon{
+                    position: absolute;
+                    right: 20px;
+                    top: 50px;
+                    // margin-top: -30px;
+                    text-align: center;
+                    .icon-style{
+                      height: 30px;
+                      line-height: 30px;
+                      width: 24px;
+                      border: 1px solid #ddd;
+                      background: #F7F7F7;
+                      .iconfont{
+                        color: #666666;
+                        font-size: 7px;
+                      }
+                    }
+                    .isDisable{
+                      .iconfont{
+                        color: #bbbbbb;
+                      }
+                    }
+                  }
+                }
+                .list-tab-anx::-webkit-scrollbar {
+                  display: none;
+                }
+              }
+            }
+          }
+          //只有3级菜单
+          .list-tab-panel-third-col1{
+            width: 250px;
+            padding: 0;
+            height: auto;
+            display: block;
+            .list-tab-container{
+              width: 250px;
+              margin-top:0px;
+              .list-search{
+                display: none;
+              }
+              .list-menu {
+                overflow: hidden;
+                position: relative;
+                .list-container{
+                  height: 100%;
+                  overflow-x: hidden;
+                  line-height: 30px;
+                  .list-box{
+                    /* 规定的列数，设置3列 */
+                    column-count: 1;
+                    /* 规定的间隔距离 */
+                    column-gap: 0;
+                    width: 250px;
+                    display: block;
+                    .item{
+                      margin-bottom: 0px;
+                      .list-box-indent{
+                        .menuLeaf{
+                          width: 250px;
+                          padding:0 16px;
+                          height: 30px;
+                          line-height: 30px;
+                          display: inline-block;
+                          vertical-align: middle;
+                        }
+                      }
+                    }
+                  }
+                }
+                .list-tab-anx{
+                  display: none;
+                }
+              }
+            }
+          }
+          //到4级菜单只有1个菜单项
+          .list-tab-panel-fourth-col1{
+            width: 250px;
+            padding: 0px 20px 20px 20px;
+            height: auto;
+            .list-tab-container{
+              width: 225px;
+              .list-search{
+                display: none;
+              }
+              .list-menu {
+                overflow: hidden;
+                position: relative;
+                .list-container{
+                  height: 100%;
+                  overflow: hidden;
+                  line-height: 30px;
+                  .list-box{
+                    /* 规定的列数，设置3列 */
+                    column-count: 1;
+                    /* 规定的间隔距离 */
+                    column-gap: 0;
+                    width: 250px;
+                    display: inline-block;
+                  }
+                }
+                .list-tab-anx{
+                  display: none;
+                }
+              }
+            }
+          }
+          //到5级菜单有少于4个菜单项
+          .list-tab-panel-fourth-col3{
+            width: 750px;
+            padding: 10px 20px 20px 20px;
+            .list-tab-container{
+              width: 750px;
+              .list-search{
+                display: none;
+              }
+              .list-menu {
+                position: relative;
+                .list-container{
+
+                  .list-box{
+                    // border-top:1px solid #E6E6E6;
+                    /* 规定的列数，设置3列 */
+                    column-count: 3;
+                    /* 规定的间隔距离 */
+                    column-gap: 0;
+                    width: 690px;
+                    // height: 300px;
+                    // overflow: scroll;
+                    // position: relative;
+                    display: inline-block;
+                  }
+                }
+                .list-tab-anx{
+                  display: none;
+                }
+              }
+            }
+          }
+          .list-tab-panel-fifth-col1{
+            width: 250px;
+            padding: 0px 20px 20px 20px;
+            height: auto;
+            .list-tab-container{
+              width: 228px;
+              .list-search{
+                display: none;
+              }
+              .list-menu {
+                // overflow: hidden;
+                position: relative;
+                .list-container{
+                  width: 100%;
+                  // height: 500px;
+                  height: 100%;
+                  // max-height: 400px;
+                  // max-height: max-content;
+                  overflow-x: hidden;
+                  overflow-y: scroll;
+                  .list-box{
+                    /* 规定的列数，设置3列 */
+                    column-count: 1;
+                    /* 规定的间隔距离 */
+                    column-gap: 0;
+                    width: 250px;
+                    display: inline-block;
+                    .item{
+                      margin-bottom: 0px; 
+                      .list-box-nest{
+                        .list-box-menuLeaf{
+                          float: left;
+                          width: 228px;
+                          // padding-bottom: 30px;
+                        }
+                        .list-box-menuLeaf:last-child{
+                          padding-bottom: 0px;
+                        }
+                      }
+                    }
+                    .item .list-box-direct .list-box-direct-title{
+                      height: auto;
+                      margin: 0;
+                    }
+                  }
+                }
+                .list-tab-anx{
+                  display: none;
+                }
+              }
+            }
+          }
+          //到5级菜单
+          .list-tab-panel-fifth-col3{
+            width: 750px;
+            .list-tab-container{
+              width: 750px;
+              .list-search{
+                display: none;
+              }
+              .list-menu {
+                position: relative;
+                .list-container{
+                  .list-box{
+                    // border-top:1px solid #E6E6E6;
+                    /* 规定的列数，设置3列 */
+                    column-count: 3;
+                    /* 规定的间隔距离 */
+                    column-gap: 0;
+                    width: 690px;
+                    // height: 300px;
+                    // overflow: scroll;
+                    // position: relative;
+                    display: inline-block;
+                    .item{
+                      margin-bottom: 0px; 
+                      .list-box-nest{
+                        .list-box-menuLeaf{
+                          // float: left;
+                          width: 228px;
+                          // padding-bottom: 30px;
+                        }
+                        .list-box-menuLeaf:last-child{
+                          padding-bottom: 0px;
+                        }
+                      }
+                    }
+                    .item .list-box-direct .list-box-direct-title{
+                      height: auto;
+                      margin: 0;
+                    }
+                  }
+                }
+                .list-tab-anx{
+                  display: none;
+                }
+              }
+            }
+          }
+        }
+      }
+      &-li:hover{
+        color: $sidebar-color;
+        background-color:$h-sidebar-menu-active-bgcolor;
+        // border-left: 4px solid #037DF3;
+        .li-first-i:before {
+          color: #417BFD;
+        }
+        .list-item .list-item-menu > .li-span {
+          color: #417BFD;
+        }
+        .li-arrow-i {
+          color: #417BFD;
+        }
+        .li-last-i:before{
+          color: #417BFD;
+        }
+      }
+      .tab-hover{
+        .list-tab {
+          // display: block;
+          visibility: visible;
+          opacity: 1;
+          // z-index: -999;
+          
+          .list-tab-panel{
+            left: 200px;
+            z-index: -999;
+            transition: all .4s ease-in-out;
+          }
+        }
+      }
+      &-coll {
+        // display: none;
+        background: $h-sidebar-menu-active-bgcolor;
+        .coll-item{
+          height: 35px;
+          // line-height: 35px;
+          // padding-top:8px;
+          // padding-left: 16px;
+          text-align: left;
+          position: relative;
+          .h-drag-icon{
+            position: absolute;
+            top: 5px;
+            right: 10px;
+            color: #3597F5;
+          }
+          .router-link-active{
+            .h-drag-icon{
+              color: #fff;
+            }
+          }
+          .coll-item-title{
+            color:$coll-item-title-color;
+            width: 200px;
+            height: 35px;
+            line-height: 35px;
+            padding-left: 21px;
+            padding-right: 21px;
+            font-size: $font-size-base;
+            display: inline-block;
+            word-break: keep-all;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+          }
+          .coll-item-del{
+            float: right;
+            position: relative;
+            right: 20px;
+            display: none;
+            i{
+              font-size: $font-size-base;
+            }
+          }
+        }
+        .coll-item:hover{
+          .coll-item-title{
+            color: #037DF3;
+          }
+          .coll-item-del{
+            display: inline-block;
+          }
+        }
+        .coll-item{
+          .router-link-active{
+            .coll-item-title{
+              color: #fff;
+              background: #037DF3;
+            }
+          }
+        }
+        .sortable-chosen{
+          background: $sidebar-coll-item-drag-bg-color;
+        }
+        .sortable-ghost{
+          background: $sidebar-coll-item-drag-bg-color;
+        }
+      }
+      //.tab-active{
+      .h-sidebar-menu-list-li{
+          color: #037DF3;
+          background-color:$sidebar-menu-bgcolor;
+          .li-first-i, .li-last-i, .li-span{
+            color: #037DF3;
+          }
+        //}
+        .h-sidebar-menu-list-coll{
+          display: block;
+        }
+      }
+      .tab-active{
+        .h-sidebar-menu-list-li{
+          color: #037DF3;
+          background-color:$h-sidebar-menu-active-bgcolor;
+        }
+      }
+    }
+    &-expand {
+      z-index: 999;
+      position: fixed;
+      bottom: 0;
+      // left: 50%;
+      width: 200px;
+      height: 30px;
+      background: $sidebar-webkit-bgcolor-liner;
+      // box-shadow: 2px 0 5px 0 rgba(0,0,0,0.07);
+      cursor: pointer;
+      .expandIcon {
+        // float: right;
+        // line-height: $sidebar-select-height;
+        i {
+          display: inline-block;
+          font-size: 14px;
+          color: $sidebar-select-iconColor;
+          cursor: pointer;
+        }
+        // i:before{
+        //   content: '\e810'
+        // }
+        // i{
+        //   transform: rotate(45deg);
+        //   -webkit-transform: rotate(45deg);
+        // }
+      }
+    }
+  }
+}
+
+/* menu collapse */
+.hideSidebar {
+  .#{$sidebar-prefix-cls}-wrapper {
+    width: $sidebar-collapse-width;
+  }
+  .#{$sidebar-prefix-cls}-contain {
+    transition: all .2s ease-in-out;
+    .h-sidebar-menu {
+      width: 60px;
+      box-shadow:2px 0 5px 0 rgba(0,0,0,0.07);
+      transition: all .2s ease-in-out;
+      .h-sidebar-menu-home{
+        width: 60px;
+        overflow: hidden;
+        height: 40px;
+        transition: all .2s ease-in-out;
+        .home-item{
+          width: 200px;
+          .li-span{
+            visibility: hidden;
+          }
+        }
+      }
+      .h-sidebar-menu-list{
+        width:60px;
+        overflow: hidden;
+        height: 40px;
+        transition: all .2s ease-in-out;
+        .list-item-menu{
+          width: 200px;
+          .li-span{
+            visibility:hidden;
+          }
+          .li-last-i{
+            visibility:hidden;
+          }
+        }
+      }
+      .h-sidebar-menu-expand{
+        z-index: 9999;
+        position: fixed;
+        bottom: 0;
+        // left: 50%;
+        width: 60px;
+        height: 30px;
+        background: $sidebar-menu-bgcolor;
+        cursor: pointer;
+        transition: all .2s ease-in-out;
+        .expandIcon {
+          // float: right;
+          // line-height: $sidebar-select-height;
+          i {
+            display: inline-block;
+            font-size: 14px;
+            color: $sidebar-select-iconColor;
+            cursor: pointer;
+          }
+          i:before{
+            content: '\ee04'
+          }
+        }
+      }
+    }
+  }
+  .#{$sidebar-prefix-cls}-contain:hover {
+    width: 200px;
+    transition: all .2s ease-in-out;
+    cursor: pointer;
+    .h-sidebar-menu{
+      width: 200px;
+      transition: all .2s ease-in-out;
+      .h-sidebar-menu-home{
+        width:200px;
+        transition: all .2s ease-in-out;
+        .li-span {
+          visibility:visible;
+          transition: all .2s ease-in-out;
+        }
+      }
+      .h-sidebar-menu-list{
+        width:200px;
+        transition: all .2s ease-in-out;
+        overflow: visible;
+        height: auto;
+        li {
+          .list-item-menu {
+            text-align: left;
+          }
+          .li-first-i {
+            // margin-left: 21px;
+          }
+          .li-span {
+            visibility:visible;
+            transition: all .2s ease-in-out;
+          }
+          .li-arrow-i {
+            visibility:visible;
+            transition: all .2s ease-in-out;
+          }
+          .li-last-i {
+            visibility:visible;
+            transition: all .2s ease-in-out;
+          }
+        }
+        .tab-active{
+          text-align:right;
+          // color: red;
+          .h-sidebar-menu-list-coll{
+            display: block;
+          }
+        }
+      }
+      // .h-sidebar-menu-list:hover{
+      //   .list-tab{
+      //     visibility: visible;
+      //     opacity: 1;
+      //     .list-tab-panel{
+      //       left: 200px;
+      //     }
+      //   }
+      // }
+    }
+    
+    .h-sidebar-menu-expand{
+      width: 200px;
+      transition: all .2s ease-in-out;
+      .expandIcon {
+        // float: right;
+        // line-height: $sidebar-select-height;
+        i {
+          transform: rotate(45deg);
+          -webkit-transform: rotate(45deg);
+        }
+      }
+    }
+  }
+}
+.openedSidebar{
+  .h-sidebar-menu-expand {
+    .expandIcon {
+      transition: all .2s ease-in-out;
+      i {
+        transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+      }
+    }
+  }
+}
+.list-tab-panel-fourth-col1, .list-tab-panel-fifth-col1{
+  .list-menu {
+    overflow-y: scroll !important;
+    .list-container {
+      overflow-y: scroll !important;
+    }
+  }
+}
+.list-tab-panel-fourth-col2, .list-tab-panel-fifth-col2{
+  padding: 10px 6px 30px 10px !important;
+  width: 500px !important;
+  .list-tab-container{
+    width: 480px !important;
+    .list-search{
+      display: none;
+    }
+    .list-menu {
+      overflow-y: scroll !important;
+      .list-container {
+        overflow-y: scroll !important;
+        .list-box{
+          width:460px !important;
+        }
+      }
+      .list-tab-anx{
+        display: none !important;
+      }
+    }
+
+  }
+}
+.hideSidebar{
+  .h-sidebar-focus{
+    .h-sidebar-menu-list .tab-hover .list-tab .list-tab-panel{
+      left: 200px;
+      -webkit-transition: all .2s ease-in-out;
+      transition: all .2s ease-in-out;
+    }
+  }
+}
+.hideSidebar{
+  .h-sidebar-blur{
+    .h-sidebar-menu-list .tab-hover .list-tab .list-tab-panel{
+      left: 60px;
+      -webkit-transition: all .2s ease-in-out;
+      transition: all .2s ease-in-out;
+    }
+  }
+}
+// .list-tab-panel-fifth-col2{
+//   padding: 10px 6px 30px 10px !important;
+//   width: 500px !important;
+//   .list-tab-container{
+//     width: 480px !important;
+//     .list-menu {
+//       .list-container {
+//         .list-box{
+//           width:460px !important;
+//         }
+//       }
+//       .list-tab-anx{
+//         display: none;
+//       }
+//     }
+
+//   }
+// }
+
+.h-sidebar-contain {
+  background: #fff;
+  color: $sidebar-color;
+  width: $sidebar-base-width;
+  font-size: 14px;
+  // border-right: 1px solid #ECECEC;
+  top: 50px;
+  @include user-select();
+  /* 滚动条 */
+  /*三角箭头的颜色*/
+  scrollbar-arrow-color: $scrollbar-color;
+  /*滚动条滑块按钮的颜色*/
+  scrollbar-face-color: $scrollbar-color;
+  /*滚动条整体颜色*/
+  scrollbar-highlight-color: $scrollbar-bgcolor;
+  /*滚动条阴影*/
+  scrollbar-shadow-color: $scrollbar-bgcolor;
+  /*滚动条轨道颜色*/
+  scrollbar-track-color: $scrollbar-bgcolor;
+  /*滚动条的基本颜色*/
+  scrollbar-base-color: $scrollbar-bgcolor;
+
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+    background-color: $scrollbar-bgcolor;
+  }
+
+  ::-webkit-scrollbar-track {
+    -webkit-box-shadow: none;
+    background-color: $scrollbar-bgcolor;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: $scrollbar-color;
+  }
+
+}
+
+
+
+@media (max-width: 1024px) {
+  .list-box {
+      column-count: 4;
+  }
+}
+
+@media (max-width: 860px) {
+  .list-box {
+      column-count: 3;
+  }
+}
+
+@media (max-width: 480px) {
+  .list-box {
+      column-count: 2;
+  }
+}
+
+

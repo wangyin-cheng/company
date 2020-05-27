@@ -1,0 +1,15 @@
+// @import './frame_custom.scss';
+@import './frame_mixin.scss';
+@import './frame_reset.scss';
+// @import './frame_login.scss';
+// @import './frame_main.scss';
+@import './frame_topbar.scss';
+@import './frame_sidebar.scss';
+@import './frame_navbar.scss';
+@import './frame_noticebar.scss';
+@import './frame_scroll.scss';
+
+.main-wrapper {
+  // margin: $topbar-base-height + $navbar-base-height 0 0 $sidebar-base-width;
+  background: $body-color;
+}

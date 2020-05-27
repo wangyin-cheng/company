@@ -1,0 +1,301 @@
+{
+  "release": [
+    {
+      "version": "1.2.22",
+      "features": [
+        "统一框架保留浏览器原生的 fetch 接口，不覆盖，不重写",
+        "统一框架新增运行时配置 CONFIRM_ON_TAB_CLOSE，设置为 true，关闭页签时会弹出窗口请用户确认，默认关闭"
+      ],
+      "changes": [
+        "统一框架修复在 UCF 客户端环境下，样式显示异常的问题，具体表现是界面上的边框表现异常"
+      ],
+      "others": "本次更新内容涉及到src/frame目录，请考虑使用激进模式升级。如src/frame目录下有修改，需手动覆盖升级，不要直接使用激进模式升级。"
+    },
+    {
+      "version": "1.2.21",
+      "features": [
+        "统一框架新增运行时配置 KEEP_VISITED_VIEWS_ON_RELOAD，页面会话期内持久保存已经打开的 tab 页签，保证刷新之后仍然可以记录已经打开的页签，默认关闭",
+        "统一框架子系统入口 bootstrap 函数新增 tabs 支持子系统在初始化时调用，但应该避免调用 addNewTab 打开新窗口的行为"
+      ],
+      "changes": [
+        "统一框架支持和修复 iframe 类型菜单通过配置 menu_arg 的方式添加查询字符串"
+      ],
+      "others": "本次更新内容涉及到src/frame目录，请考虑使用激进模式升级。如src/frame目录下有修改，需手动覆盖升级，不要直接使用激进模式升级。"
+    },
+    {
+      "version": "1.2.20",
+      "changes": [
+        "统一框架修复样式隔离在 windows 上失效的问题"
+      ],
+      "others": "本次更新内容涉及到src/frame目录，请考虑使用激进模式升级。如src/frame目录下有修改，需手动覆盖升级，不要直接使用激进模式升级。"
+    },
+    {
+      "version": "1.2.19",
+      "features": [
+        "统一框架优化 isUcf 和 isFrame 的判断逻辑，支持通过查询字符串的方式指定客户端环境",
+        "统一框架优化 webpack 关于样式文件的编译配置，并优先支持 less 文件的样式编码"
+      ],
+      "changes": [
+        "统一框架修复和优化 addNewTab 方法，支持打开相同域下 iframe 类型的临时菜单",
+        "统一框架修复和优化编译时配置 productionSourceMap 的逻辑，支持在生产环境加载 source map 做源码调试"
+      ],
+      "others": "本次更新内容涉及到src/frame目录，请考虑使用激进模式升级。如src/frame目录下有修改，需手动覆盖升级，不要直接使用激进模式升级。"
+    },
+    {
+      "version": "1.2.18",
+      "features": [
+        "hui-deploy 升级到 0.2.0，支持针对 manifest 的配置解析，hui-pro 默认开启 manifest，支持外框架或者子系统应用在 SEE 平台的独立升级和删除",
+        "hui-pro 新增 see:pack 命令，支持制作包含外框架和子系统的组合发布物，优化发布物制作流程"
+      ],
+      "changes": [
+        "修复 Sidebar 在折叠状态下弹出面板位置显示异常的问题"
+      ],
+      "others": "本次更新内容涉及到src/frame目录，请考虑使用激进模式升级。如src/frame目录下有修改，需手动覆盖升级，不要直接使用激进模式升级。"
+    },
+    {
+      "version": "1.2.17",
+      "features": [
+        "子系统入口引导函数 `bootstrap` 暴露全局状态 `store`，支持变更系统级或者子系统级的 vuex 状态",
+        "支持在生成 SEE 平台发布物过程中指定 `-y` 或者 `--yes` 参数跳过交互式的关键参数确认过程",
+        "新增运行时配置 `HOW_TO_GET_MENU_INFO_IN_UCF` 支持设置 UCF 客户端中（即 `isUcf` 为 true，非 UCF 客户端中该参数无效）中获取菜单相关字段的方式，可选值为 `cookie` 或 `search`，默认为 `cookie`"
+      ],
+      "changes": [
+        "路由拦截器新增白名单 beforepage",
+        "修复调用 addNewTab 方法打开 iframe 类型的临时页失败的问题"
+      ],
+      "others": "本次更新内容涉及到src/frame目录，请考虑使用激进模式升级。如src/frame目录下有修改，需手动覆盖升级，不要直接使用激进模式升级。"
+    },
+    {
+      "version": "1.2.16",
+      "features": [
+        "增加开关，isSecondMenuCollect参数控制是否支持二级菜单收藏，默认为false，当为true时，二级菜单可收藏新增二级菜单收藏功能"
+      ],
+      "changes": [
+        "修复和优化 SEE 平台发布物制作功能，支持指定压缩包名称以及发布物编排文件关键参数",
+        "登录界面，用户名或密码输入框为空时，提示信息显示在对应位置",
+        "优化小屏幕时，菜单面板搜索时上移情形",
+        "为了兼容不允许跨域的cas的，cas适配器逻辑变动"
+      ],
+      "others": "本次更新内容涉及到src/frame目录，请考虑使用激进模式升级。如src/frame目录下有修改，需手动覆盖升级，不要直接使用激进模式升级。"
+    },
+    {
+      "version": "1.2.15",
+      "features": [
+        "新增运行时配置 KEEP_IFRAME_PAGE_ALIVE，支持 iframe 页面的状态保持，即 iframe 页面菜单切换时不刷新",
+        "新增运行时配置 TABLE_SCROLLBAR_WIDTH 支持定制一体化框架中 Table 及其相关组件（包括 SimpleTable EditGird 等）的滚动条宽度",
+        "新增开关isRefreshLockScreen，控制锁屏后解锁是否刷新当前浏览器，默认false（不刷新）",
+        "新增子系统方法 bootstrap 方法支持用户执行子系统的引导方法，调用用法请参考 demo 子系统",
+        "新增 mergeLocaleFromUrl 函数支持子系统合并 url 指定的语言包文件，调用用法请参考 demo 子系统"
+      ],
+      "changes": [
+        "优化左侧菜单收缩时，跟随左侧菜单收缩",
+        "优化左侧菜单的增加浮显，文字超出时，出现点点点，且浮显菜单名称",
+        "优化输入框密码回填背景色为当前的主题色",
+        "优化菜单滚动时，面板的位置显示"
+      ],
+      "bugfixes": [
+        "修复菜单收缩情况下，二级菜单隐藏后占用高度的问题"
+      ],
+      "others": "本次更新内容涉及到src/frame目录，请考虑使用激进模式升级。如src/frame目录下有修改，需手动覆盖升级，不要直接使用激进模式升级。"
+    },
+    {
+      "version": "1.2.14",
+      "features": [
+        "增加开关isExpandSidebarMenu，第一次登陆之后是否就打开左侧菜单，默认是",
+        "增加开关isTwoFactorCheck，是否开启双因验证，默认否；开启后，登录界面需要获取邮件验证码登录（前后台都要开启次开关才能生效）",
+        "增加开关isOpenSpace，是否显示空间切换，默认否",
+        "sysconfig 新增 JUMP_TO_HOME_ON_LOCALE_CHANGE 配置项控制语言切换之后的跳转行为，默认关闭，即停留在当前页上，设置为 true 则跳转到首页",
+        "closeTab 方法支持添加路由参数，调用示例 this.$tabs.closeTab('huiTest', 'mainIndex', {a: 123})",
+        "编译文件增加 hash 字符串避免缓存"
+      ],
+      "changes": [
+        "兼容谷歌、IE、火狐等主流浏览器（除IE导入功能不可用外，已全部修复IE遗留bug）",
+        "外框架（包括各组件、httpfetch等拦截器）中的的国际化提示中英繁体已全部补充完善，各子系统中的国际化请自行补充",
+        "外框架所有的请求url上全部带上时间戳，避免浏览器的缓存机制导致数据异常",
+        "优化Topbar子系统的工具栏，增加省略号宽度，保证选择子系统时能平稳过渡",
+        "增加外框架中表单的label浮显",
+        "优化左侧菜单收回时的动画效果",
+        "优化运行期子系统资源的加载逻辑，支持设置 i18n 为 false 禁用子系统的语言文件"
+      ],
+      "bugfixes": [
+        "修复sidebar左侧的菜单，当文字较长时，出现省略号，且浮动显示菜单以及面板上的文字",
+        "修复 sysconfig logo 字段在运行期配置无效的问题"
+      ],
+      "others": "本次更新内容涉及到src/frame目录，请考虑使用激进模式升级。如src/frame目录下有修改，需手动覆盖升级，不要直接使用激进模式升级。"
+    },
+    {
+      "version": "1.2.13",
+      "features": [
+        "新增开关isSubSystemMenu，配置为true时，二级菜单会以子系统的形式展示，默认为falkse",
+        "新增开关localLangs，配置国际化语言（注意：，若不配置，则不会出现国际化按钮，如：localLangs：['zh-CN','zh-TW','en-US']）"
+      ],
+      "changes": [
+        "首页tab、首页内容支持国际化",
+        "兼容谷歌、IE、火狐浏览器，不出现遮挡最右侧左移按钮",
+        "优化安全漏洞，user-token、Admin-token前端加密",
+        "锁屏时，优化解锁时的校验提示信息",
+        "优化租户显示位置，topbar顶部直接显示当前租户"
+      ],
+      "bugfixes": [
+        "修复租户切换时，租户的下拉数据重复的问题",
+        "修复修改密码时，密码框失去焦点时，IE浏览器密码强度提示最强的问题",
+        "修复普通用户登录时提示'未找到租户或租户为非正常状态的问题'",
+        "修复点击关闭按钮或调用 closeTab 方法关闭页签时参数丢失的问题"
+      ],
+      "others": "本次更新内容涉及到src/frame目录，请考虑使用激进模式升级。如src/frame目录下有修改，需手动覆盖升级，不要直接使用激进模式升级。"
+    },
+    {
+      "version": "1.2.12",
+      "features": [
+        "兼容在火狐、IE浏览器下sidebar、topbar的样式问题",
+        "当tab打开数超过浏览器宽度时，优化最后一个tab遮挡住最右边的左移按钮",
+        "切换皮肤后，浏览器保存当前的皮肤状态（Cookies存入当前皮肤名）",
+        "优化个人信息修改时转为异步请求，优化多租户切换时转为异步请求，优化topbar部分接口（锁屏、密码是否过期、是否初始密码等）根据开关控制是否发起请求",
+        "获取用户个人信息接口getCurrUserInfo替换为getCurrUser",
+        "UCF 客户端下路由添加 menu_arg 字段"
+      ],
+      "bugfixes": [
+        "修复tab菜单，右键单击刷新当前页面刷新两次的问题",
+        "当navbar设置最大打开tab菜单数时，切换之前的tab，修复页面内容与tab显示不匹配的问题",
+        "点击页签切换时查询参数丢失的问题",
+        "当前页刷新时会执行两次生命周期的问题"
+      ],
+      "others": "本次更新内容涉及到src/frame目录，请考虑使用激进模式升级。如src/frame目录下有修改，需手动覆盖升级，不要直接使用激进模式升级。"
+    },
+    {
+      "version": "1.2.11",
+      "features": ["字体库添加“宋体”"],
+      "bugfixes": [
+        "修复isUrlLowercase为true时，部分接口未做转小写处理",
+        "修复navbar的层级显示问题",
+        "修复34版本会话失效时弹框一直弹"
+      ],
+      "others": "本次更新内容涉及到src/frame目录，请考虑使用激进模式升级。如src/frame目录下有修改，需手动覆盖升级，不要直接使用激进模式升级。"
+    },
+    {
+      "version": "1.2.10",
+      "features": [
+        "登录页添加键盘回车登录功能",
+        "static下的国际化文件，新增登录校验时国际化提示"
+      ],
+      "changes": [
+        "调整axios处理响应最大长度为2000*1000",
+        "处理应答错误异常时，优化异常提示信息",
+        "优化登录时，用户名输入框底部能完整显示异常校验提示信息",
+        "优化安全问题，token设置httponly属性，攻击者无法获取用户Cookie信息",
+        "lightblue主题下，统一input输入框色号为#333"
+      ],
+      "bugfixes": [
+        "修复t3协议时，验证码不显示问题",
+        "修复左侧菜单层级与hui下拉框层级相同导致不能正常显示问题",
+        "修复当前页刷新时会执行两次生命周期的问题"
+      ],
+      "others": "本次更新内容涉及到src/frame目录，请考虑使用激进模式升级。如src/frame目录下有修改，需手动覆盖升级，不要直接使用激进模式升级。"
+    },
+    {
+      "version": "1.2.9",
+      "changes": [
+        "前端框架菜单由原来点击才展开菜单栏改成鼠标经过展开",
+        "前端框架菜单收藏图标由原来的图钉改成了星号"
+      ],
+      "bugfixes": ["修复多租户切换不成功时，提示不正确以及仍然刷新页面的问题"],
+      "others": "本次更新内容涉及到src/frame目录，请考虑使用激进模式升级。如src/frame目录下有修改，需手动覆盖升级，不要直接使用激进模式升级。"
+    },
+    {
+      "version": "1.2.8",
+      "features": ["新增繁体语言支持"],
+      "changes": ["common/entry下的api.js、_api_config.js移至frame/api下"],
+      "others": "本次更新内容涉及到src/frame目录，请考虑使用激进模式升级。如src/frame目录下有修改，需手动覆盖升级，不要直接使用激进模式升级。"
+    },
+    {
+      "version": "1.2.7",
+      "changes": [
+        "sysconfig.js中删除若干无用属性，新增isRecordUserBehavior、isHidePwdAndLockScreen、isShowTheme、isShowLocalLang等属性",
+        "优化部分样式",
+        "完善多租户功能"
+      ],
+      "others": "本次更新内容涉及到src/frame目录，请考虑使用激进模式升级。如src/frame目录下有修改，需手动覆盖升级，不要直接使用激进模式升级。sysconfig增加的属性说明见documents/config.md。"
+    },
+    {
+      "version": "1.2.6",
+      "features": [
+        "sysconfig增加logo属性，支持个性化logo",
+        "sysconfig增加freeLogin属性，支持屏蔽密码操作和锁屏等功能",
+        "sysconfig增加showMenuSearch属性，支持控制显示顶部菜单检索框"
+      ],
+      "bugfixes": [
+        "修复部分框架样式与子系统样式冲突的问题",
+        "修复框架打包后static中图片损坏的问题"
+      ],
+      "others": "本次更新内容涉及到src/frame目录，请考虑使用激进模式升级。如src/frame目录下有修改，需手动覆盖升级，不要直接使用激进模式升级。"
+    },
+    {
+      "version": "1.2.5",
+      "changes": [
+        "移除frame/styles/hui目录下所有hui样式",
+        "当前国际化语言设置到cookie",
+        "多租户参数设置到cookie",
+        "sysconfig中添加isTenantMode切换多租户模式"
+      ],
+      "bugfixes": ["修复Tabs API refresh方法的问题"],
+      "others": "本次更新内容涉及到src/frame目录，请考虑使用激进模式升级。如src/frame目录下有修改，需手动覆盖升级，不要直接使用激进模式升级。"
+    },
+    {
+      "version": "1.2.4",
+      "features": [
+        "支持子系统样式隔离",
+        "支持多语言切换",
+        "根目录下增加了框架文档"
+      ],
+      "changes": ["调整二级以上菜单的布局"],
+      "bugfixes": [
+        "修复UCF模式下菜单不能正常打开的问题",
+        "修改子系统打包提取图片和字体文件到子系统打包路径下"
+      ],
+      "others": "本次更新内容涉及到src/frame目录，请考虑使用激进模式升级。如src/frame目录下有修改，需手动覆盖升级，不要直接使用激进模式升级。"
+    },
+    {
+      "version": "1.2.3",
+      "bugfixes": [
+        "修复滚动条样式异常的问题",
+        "修复开启标签页缓存的时候，最后一个标签页在某些场景下缓存失效及页面失去响应的问题"
+      ],
+      "others": "本次更新内容涉及到src/frame目录，请考虑使用激进模式升级。如src/frame目录下有修改，需手动覆盖升级，不要直接使用激进模式升级。"
+    },
+    {
+      "version": "1.2.2",
+      "features": [
+        "子系统可单独配置版本号。在子系统根目录增加meta.json，version属性配置子系统版本号",
+        "子系统打包支持在文件头部添加版本号"
+      ],
+      "changes": ["去除src/frame/styles下有关操作员中心页面的样式"],
+      "others": "本次更新内容涉及到src/frame目录，请考虑使用激进模式升级。如src/frame目录下有修改，需手动覆盖升级，不要直接使用激进模式升级。"
+    },
+    {
+      "version": "1.2.1",
+      "features": [
+        "子系统新增国际化配置属性i18n，用于控制是否加载国际化语言文件或者直接配置以es6 module导出的国际化语言对象",
+        "子系统样式增加支持less、stylus",
+        "支持sysconfig中配置isAllKeepAlive属性，用于页面是否需要缓存的默认设置"
+      ],
+      "changes": ["单个子系统时，顶部不显示子系统名称"],
+      "bugfixes": ["修复eslint-loader与webpack4版本不兼容的问题"],
+      "others": "本次更新内容涉及到src/frame目录，请考虑使用激进模式升级。如src/frame目录下有修改，需手动覆盖升级，不要直接使用激进模式升级。"
+    },
+    {
+      "version": "1.2.0",
+      "features": [
+        "升级webpack4",
+        "集成操作员中心版的消息中心组件",
+        "支持子系统导出Vue directive，并在加载子系统时注册到全局",
+        "引入恒生规范的HUI样式"
+      ],
+      "changes": [
+        "Tab API addNewTab方法增加query和isIframe入参",
+        "子系统的Store模块在注册时增加判断是否已存在，如果存在则不再注册"
+      ],
+      "bugfixes": ["修复菜单字段中存在ext_field时无限跳转路由的问题"],
+      "others": "本次更新内容涉及到src/frame目录，请考虑使用激进模式升级。如src/frame目录下有修改，需手动覆盖升级，不要直接使用激进模式升级。"
+    }
+  ]
+}

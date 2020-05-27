@@ -1,0 +1,170 @@
+// 系统管理(目前为lightblue)
+.web-sys {
+  .h-tabs-bar {
+    margin-bottom: 12px;
+  }
+  .notice-bar {
+    margin: 16px 0 12px 0;
+    padding: 0 12px;
+    height: 36px;
+    border-radius: 2px;
+    box-sizing: border-box;
+  }
+  .icon-t-b-Warning {
+    font-size: 14px;
+    color: #4686F2;
+  }
+  .notice-lf {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    .notice-txt {
+      padding-left: 8px;
+      color: #434343;
+      box-sizing: border-box;
+    }
+    .notice-num {
+      color: #4F91F4;
+    }
+    .h-icon {
+      color: #4686F2;
+    }
+  }
+  .department {
+    .h-btn-ghost {
+      margin-left: 10px;
+    }
+  }
+  .environment-title {
+    padding-bottom: 20px;
+    font-size: 14px;
+    color: #000000;
+    box-sizing: border-box;
+  }
+  .environment {
+    padding-bottom: 40px;
+    box-sizing: border-box;
+    .h-radio-group-item {
+      margin-right: 0;
+      padding-right: 24px;
+      color: #000000;
+      box-sizing: border-box;
+    }
+  }
+  .enviroment-bot {
+    .h-btn-gost {
+      margin-left: 6px;
+    }
+  }
+}
+.lightblue .h-modal-body {
+  padding: 8px 16px 0 16px;
+  box-sizing: border-box;
+}
+// user弹框
+.edit-user {
+  .user-err {
+    height: 36px;
+    background: #FDEDEF;
+    border-radius: 2px;
+    .err-lf {
+      display: inline-block;
+      padding: 0 6px 0 12px;
+      height: 100%;
+      box-sizing: border-box;
+    }
+    .icon-delete_fill {
+      display: flex;
+      height: 100%;
+      color: #F14C5D;
+      align-items: center;
+    }
+    .user-close {
+      float: right;
+      padding: 0 12px;
+      display: flex;
+      height: 100%;
+      align-items: center;
+      box-sizing: border-box;
+    }
+    .icon-close {
+      font-size: 12px;
+    }
+  }
+  .user-lf {
+    padding-right: 12px;
+    box-sizing: border-box;
+  }
+  .user-form .h-form-item-content {
+    padding: 22px 0 2px 0;
+    box-sizing: border-box;
+  }
+  .department-form {
+    padding: 24px 0 12px 0;
+    box-sizing: border-box;
+  }
+  .h-row {
+    height: 40px;
+  }
+  input::placeholder {
+    font-size: 12px;
+    color: #999999;
+  }
+  .env-icon {
+    display: inline-block;
+    height: 100%;
+    .icon-prompt {
+      color: #4686F2;
+      font-size: 18px;
+    }
+  }
+  
+}
+.txt-right {
+  text-align: right;
+}
+.lightblue :local .sys {
+  background-color: #fff;
+}
+.lightblue .h-tabs-nav .h-tabs-tab {
+  font-size: 14px;
+  color: #3A3A3A;
+}
+.lightblue :local .sys .notice {
+  background-color: #EFF5FF;
+}
+.lightblue .h-btn-ghost {
+  color: #333333;
+}
+.lightblue .h-checkbox-wrapper {
+  margin-left: 0;
+}
+.lightblue .department-form .h-form-item-label {
+  padding-right: 12px;
+  background-color: #fff;
+  box-sizing: border-box;
+}
+.lightblue .department-form .h-form-item-content {
+  margin-right: 69px;
+}
+.lightblue .department-form .h-form-item {
+  margin-bottom: 12px;
+}
+.lightblue .department-form .h-input {
+  border-color: #D9D9D9;
+}
+.lightblue .env-icon .iconfont {
+  font-size: 20px;
+  color: #4686F2;
+}
+.lightblue .env-icon .h-icon-success {
+  color: #1CB77B;
+}
+
+.env-content {
+  padding: 12px 20px 20px 32px;
+  box-sizing: border-box;
+  .del-name {
+    color: #F14C5D;
+  }
+}

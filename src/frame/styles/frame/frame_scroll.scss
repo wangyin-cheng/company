@@ -1,0 +1,22 @@
+/*修改table滚动条样式*/
+/* 滚动条 */
+::-webkit-scrollbar{
+  width:7px;
+  height:7px;
+  background-color:transparent;
+}
+::-webkit-scrollbar-track{
+  /* -webkit-box-shadow: none; */
+  -webkit-box-shadow: none;
+  box-shadow: none; 
+}
+::-webkit-scrollbar-thumb{
+  border-radius: 10px;
+  background-color: $scrollbar-color;
+}
+::-webkit-scrollbar-thumb:hover{
+  cursor: pointer;
+}
+::-webkit-scrollbar-corner{
+  background: transparent;
+}

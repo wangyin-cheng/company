@@ -1,0 +1,21 @@
+// 配置管理(目前为lightblue)
+.web-setting {
+  .setting-form {
+
+  }
+}
+.lightblue .web-setting .setting-form {
+  .h-form-item-label {
+    background-color: #ffffff;
+  }
+  .h-form-item-content>.h-select,
+  .h-form-item-content>.h-input-wrapper {
+    width: 154px;
+  }
+  .h-input-small {
+    height: 28px;
+  }
+} 
+.lightblue .h-form-row .setting-status.h-form-col-6 {
+  width: 200px;
+}

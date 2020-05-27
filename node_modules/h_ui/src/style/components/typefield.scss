@@ -1,0 +1,132 @@
+$typefield-prefix-cls: "#{$css-prefix}typefield" ;
+.#{$typefield-prefix-cls}{
+  // display: block;
+  display: inline-block;
+  position: relative;
+  height: $form-component-height;
+  line-height: $form-component-height;
+  width: 100%;
+  vertical-align: middle;
+  input{
+    width: 100%;
+    height: $form-component-height;
+    line-height: $form-component-height;
+    padding-left:$typefield-input-padding-left;
+    padding-right:$typefield-input-padding-right;
+    outline: 0;
+    font-size:$typefield-input-font-size;
+    // line-height: 1.42857143;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    -webkit-transition: border-color ease-in-out $transition-time, -webkit-box-shadow ease-in-out $transition-time;
+    -o-transition: border-color ease-in-out $transition-time, box-shadow ease-in-out $transition-time;
+    transition: border-color ease-in-out $transition-time, box-shadow ease-in-out $transition-time;
+    color: $typefield-input-color;
+    background-color: $typefield-input-background-color;
+    background-image: none;
+    border: 1px solid $border-color-base;
+    border-radius:$typefield-tip-border-radius;
+    vertical-align: top;
+    @include placeholder();
+    &:hover{
+      @include hover();
+    }
+  }
+  input[disabled]:focus, 
+  input[readonly]:focus {
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    border: 1px solid $border-color-base;
+  }
+  input:focus {
+    outline: 0;
+    border-color: $typefield-input-focus-border-color;
+  }
+  &-disabled{
+    input[disabled], {
+      @include disabled();
+    }
+  }
+  &-readonly{
+    input[readonly] {
+      // background: $input-readonly-bg;
+      @include readonly();
+    }
+  }
+  &-tip {
+    position: absolute;
+    display: block;
+    font-family:$typefield-tip-font-family;
+    text-align: left;
+    line-height:$typefield-tip-line-height;
+    top: $typefield-tip-top;
+    left:$typefield-tip-left;
+    padding: $typefield-tip-padding;
+    z-index: $zindex-tooltip ;
+    font-size: $typefield-tip-font-size;
+    border-radius: $typefield-tip-border-radius;
+    border:$typefield-tip-border;
+    background: $typefield-tip-background;
+    color: $typefield-tip-color;
+    box-shadow: $typefield-tip-color-box-shadow;
+  }
+  &-left{
+    text-align:left;
+  }
+  &-center{
+    text-align:center;
+  }
+  &-right{
+    text-align:right;
+  }
+}
+
+.#{$typefield-prefix-cls}-group{
+  @include input-group("#{$typefield-prefix-cls}");
+  input{
+    border-radius: 0;
+  }
+  .h-typefield-left {
+      border-bottom-left-radius: $border-radius-small;
+      border-top-left-radius: $border-radius-small;
+      border-bottom-right-radius: $typefield-h-typefield-border-bottom-right-radius;
+      border-top-right-radius: $typefield-h-typefield-border-top-right-radius;
+  }
+  .h-select-selection {
+      margin: $typefield-h-select-selection-margin;
+      border-bottom-left-radius: $typefield-h-select-selection-border-bottom-left-radius;
+      border-top-left-radius: $typefield-h-select-selection-border-top-left-radius;
+  }
+}
+
+.#{$form-item-prefix-cls}-error{
+  .#{$typefield-prefix-cls}{
+      input{
+        border: 1px solid $error-color;
+      }
+  }
+  .h-typefield-group{
+    input{
+      border-right-width: 0;
+    }
+  }
+}
+
+.#{$form-item-prefix-cls}-changed{
+  .#{$typefield-prefix-cls}{
+      input{
+        color:$changed-color;
+      }
+  }
+}
+
+.#{$editgird-prefix-cls}-cell-error{
+    .#{$typefield-prefix-cls}{
+        input{
+            border: 1px solid $error-color;
+        }
+    }
+    .#{$input-prefix-cls}-group{
+      @include input-group-error();
+    }
+}

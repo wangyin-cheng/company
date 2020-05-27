@@ -1,0 +1,250 @@
+/* frame */
+/* 1.0 $base */
+$font-family: 
+"Microsoft YaHei",
+"微软雅黑",
+"宋体",
+Arial,
+sans-serif,
+"Helvetica Neue",
+Helvetica,
+"PingFang SC",
+"Hiragino Sans GB",
+"Microsoft YaHei",
+"微软雅黑",
+Arial,
+sans-serif;
+$line-height-base:1.2;
+$theme-base-color:#35404F; //主题色
+$base-color: #fff;//主色
+$text-color:#fff;//主文字色
+$text-hover-color:#fff;
+$error-color:#F14C5D ;
+$button-text-color:#48B1FF!important;
+$button-text-hover-color:#6CC0FF!important;
+$button-text-active-color:#409EE5!important;
+$background-color-select-hover:#2F5488;
+$input-bg:#19212B;
+$font-size-base:12px;
+$layout-menu-wrapper-bgcolor:#232D3B;
+
+//body
+$body-color: #19212C;
+
+/*topbar*/
+$topbar-bgcolor: $theme-base-color;
+$topbar-active-bgcolor:#293342;
+$topbar-color:#B3C1CF;
+$topbar-hover-color:$text-color;
+$topbar-active-color:$topbar-hover-color;
+$topbar-hover-bgcolor:$topbar-active-bgcolor;
+$topbar-selectdown-bgcolor:$layout-menu-wrapper-bgcolor;
+$topbar-selectdown-color:$text-color;
+$menu-tag-active:$body-color;
+$topBar-input-sreach-bg:#263140;
+$topBar-input-sreach-hover-bg:#263140;
+$topBar-input-sreach-hover-color:#fff;
+$h-menu-color:#B3C1CF;
+$h-navBar-tag-active-color:#fff;
+$userinfo-text-color:#fff;
+$topbar-userInfo-menu-first-item-bg:#232D3B !important;
+$topbar-userInfo-menu-item-hover-bg:#33a7ff !important;
+$topbar-menu-item-drag-bg-color:#242e3a!important;
+$topbar-sort-list-bg-color:#202935;
+$topbar-sort-list-border-color:#202935;
+$topbar-sort-item-hover-bg-color:#19212c;
+$topbar-personal-border-bottom:1px solid #35404f;
+$topbar-pwd-tips-color:#fff;
+$topbar-checkbox-color:#fff;
+
+/*sidebar*/
+$sidebar-menu-li-color:#B3C1CF;
+$sidebar-logo-bgcolor: $theme-base-color;
+$menuLeaf-title-color:$text-color;
+$sidebar-coll-item-drag-bg-color:#19212b!important;
+
+/* 4.0 $navbar */
+$navbar-bgcolor:#242E3A;
+$tags-inner-scroll-left-bgcolor:$navbar-bgcolor;
+$navbar-tag-padding-bordercolor: #19212C;
+$sidebar-menu-bgcolor:#202935;
+$h-sidebar-menu-active-bgcolor:#35404F;
+$sidebar-select-iconColor:$text-color;
+$sidebar-color:$text-color;
+$sidebar-bgcolor-liner:#202935;
+$sidebar-webkit-bgcolor-liner:#202935;
+$coll-item-title-color:$text-color;
+$list-item-i-color:$text-color;
+$menuLeaf-item-current:#19212C;
+$h-sidebar-menu-active-bgcolor:$navbar-bgcolor;
+$navbar-tag-padding-bgcolor:$navbar-bgcolor;
+
+/*button*/
+$primary-color:$theme-base-color;
+$btn-primary-bg: $theme-base-color;
+$btn-padding-base:6px 15px;
+$btn-default-color:#B6CCDC;
+$btn-default-bg:$layout-menu-wrapper-bgcolor;
+$btn-default-border:#627288;
+$btn-default-hover-color:$text-color;
+$btn-default-hover-bgcolor:$layout-menu-wrapper-bgcolor;
+$btn-default-hover-border-color:#B2CBDD;
+$btn-default-press-color:#AEC5D6;
+$btn-default-press-bgcolor:$layout-menu-wrapper-bgcolor;
+$btn-default-press-border-color:#536680;
+$btn-primary-color:$text-color;
+$btn-primary-bg:#0092FF;
+$btn-primary-border:#0092FF;
+$btn-primary-hover-color:$text-color;
+$btn-primary-hover-bgcolor:#33A7FF;
+$btn-primary-hover-border-color:#33A7FF;
+$btn-primary-press-color:$text-color;
+$btn-primary-press-bgcolor:#0083E5;
+$btn-primary-press-border-color:#0083E5;
+$btn-disable-bg:#363F4B;
+$btn-disable-border:#363F4B;
+$btn-disable-color:#596473;
+$btn-ghost-border:#B2CBDD ;
+$btn-ghost-bg:$layout-menu-wrapper-bgcolor;
+$btn-ghost-border:$btn-default-border;
+$btn-ghost-color:$btn-default-color;
+$btn-ghost-hover-color:$text-color;
+$btn-ghost-hover-bgcolor:$layout-menu-wrapper-bgcolor;
+$btn-ghost-hover-border-color:#B2CBDD;
+$btn-ghost-press-color:#AEC5D6;
+$btn-ghost-press-bgcolor:$layout-menu-wrapper-bgcolor;
+$btn-ghost-press-border-color:#536680;
+$btn-padding-large:6px 15px 7px;
+$btn-padding-small :2px 7px;
+
+/*input*/
+$input-hover-border-color: $theme-base-color;
+$input-focus-border-color: $theme-base-color;
+$input-border-color:#1B2533;
+$input-color:$text-color;
+$input-disabled-bg:$input-bg;
+$mixin-input-active-box-shadow: 0 0 0 2px rgb(64,188,255);
+$input-readonly-bg:$input-bg;
+$input-slot-pend-bg-color:#303c4c;
+$input-internal-autofill:#fff;
+
+//tree
+$tree-selected-color:$theme-base-color;
+$tree-title-hover-bgcolor:$background-color-select-hover;
+$tree-title-selected-bgcolor:#1B8DE2;
+$tree-title-hover-color:$text-color;
+$tree-title-selected-color:$text-color;
+$select-dropdown-selected-color:$theme-base-color;
+$tabs-tab-active-color:#298DFF;
+$tabs-nav-tab-color:$text-color;
+$h-tree-iconfont-color:#fff;
+$font-size-base:12px;
+$h-tree-arrow-icon:'\e6d0';
+$h-tree-arrow-rotate-tangle:rotate(0deg);
+$h-tree-arrow-open-icon:"\e6d1";
+
+//form 
+$form-item-label-background:#2b3747;
+$form-label-color:$text-color;
+$form-row-form-item-padding:0;
+$form-row-form-item-margin:0 0 8px 0; //change 2019-8-12
+$label-item-text-color:#d8e7f2;
+
+/*select*/
+$selectDropdown-background-color:#3C4655;
+$h-table-checkBox-group-hover-bgcolor:$background-color-select-hover;
+$select-selection-background-color:$input-bg;
+$border-color-base:#1B2533;
+$select-tag-background:#3C4655;
+$selectTree-selection-background-color:$input-bg;
+
+/*table*/
+$table-td-group-line-bg: #232D3B;
+$table-td-stripe-bg: #232D3B;
+$table-thead-bg: #303c4c;
+$table-small-th-height:30px;
+$table-th-td-height:28px;
+$table-th-height:30px;
+$table-small-td-height:28px;
+// $table-after-height:0;
+$table-td-hover-bg:#2A4B7A; //new 2019-7-26
+$table-td-highlight-bg:#2F5488; //new 2019-7-26
+$table-tbody-bg:#1f2834;
+$hd-table-small-boder-right-color:$border-color-base;
+$h-table-small-boder-right:1px solid $border-color-base;
+$table-wrapper-border-bottom:1px solid $border-color-base;
+$table-wrapper-border-right:1px solid $border-color-base;
+$border-color-bottom:$border-color-base;    
+$table-cell-padding-left: 16px ;
+$table-cell-padding-right: 16px;
+$table-fixed-cell-padding-left:9px;
+$table-fixed-cell-padding-right:16px;
+$editgrid-background-color:$table-tbody-bg;
+$table-normal-td:28px;
+$editgrid-border-right:1px solid $border-color-base;
+$editgrid-th-td-border-bottom:1px solid $border-color-base;
+$editgrid-th-height:32px;
+
+//msgBox
+$msgbox-content-background-color:#293341;
+$mixin-content-header-color:$text-color;
+$border-color-split:$border-color-base;
+$msgbox-title-color:$text-color;
+$msgbox-body-color:$text-color;
+$msgbox-confirm-padding:0;
+$msgbox-body-padding:32px 32px 16px 32px;
+$msgbox-body-font-size:12px; 
+$msgbox-confirm-head-icon-left:20px;
+$msgbox-confirm-head-icon-font-size:30px;
+$msgbox-title-margin-left:32px;
+$msgbox-body-padding-left:32px;
+$msgbox-body-padding-top:8px;
+$msgbox-footer-margin-top:20px;
+$msgbox-confirm-head-icon-top:22px;
+
+//select-table
+$selectTable-selection-background-color:#1b2533;
+$selectTable-multiple-h-tag-background:#3c4655;
+$selectTable-multiple-h-tag-border:1px solid #1b2533;
+
+//message
+$message-notice-content-background:$layout-menu-wrapper-bgcolor;
+
+//page
+$page-mini-background-color:#303C4C;
+$page-item-background-color:#1F2A38;
+$page-a-color:$text-color;
+$page-jump-next-color:$text-color;
+$page-simple-disabled-background:#303C4C;
+$page-simple-input-background-color:$input-bg;
+
+
+//tooltip
+$tooltip-max-width:280px;
+$tooltip-bg:$table-td-hover-bg;
+
+//editgrid
+$editgrid-fixed-body-background:$table-tbody-bg;
+
+//transfer
+$transfer-table-header-bg:$table-tbody-bg;
+
+//scrollbar
+$scrollbar-body-bgcolor: #F5F5F5;
+$scrollbar-body-color: #2B3643;
+$scrollbar-bgcolor: transparent;
+$scrollbar-color: rgba(123,129,144,0.6);
+$scrollbar-hover-color: rgba(123,129,144,1);
+
+/*BIZINDEX*/
+$bizIndexBg:#35404F;
+
+//mainBg
+$mainBg-image:$layout-menu-wrapper-bgcolor;
+$mainBg-text-color:#fff;
+$biz-carousel-bg-color:#293342;
+
+$loading-bar-normal-color: #0092ff;
+
+/* tag */
+$tag-margin: 2px 0 2px 4px;

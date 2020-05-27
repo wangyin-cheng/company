@@ -1,0 +1,261 @@
+/* frame */
+/* 1.0 $base */
+$theme-base-color:#037DF3;
+$base-color: #fff;
+$body-color: #D0D7DF;
+$scrollbar-body-bgcolor: #F5F5F5;
+$scrollbar-body-color: #2B3643;
+$scrollbar-bgcolor: transparent;
+$scrollbar-color: rgba(123,129,144,0.6);
+$scrollbar-hover-color: rgba(123,129,144,1);
+
+$base-border: 1px solid #000;
+
+$font-family: 
+"Microsoft YaHei",
+"微软雅黑",
+"宋体",
+Arial,
+sans-serif,
+"Helvetica Neue",
+Helvetica,
+"PingFang SC",
+"Hiragino Sans GB",
+"Microsoft YaHei",
+"微软雅黑",
+Arial,
+sans-serif;
+$s-font-size: 13px;
+$m-font-size: 16px;
+$bold-font: 700;
+$normal-font: 400;
+$text-color:#333333; //new 2019-7-26
+
+/* 2.0 $topbar */
+$topbar-base-height: 50px;
+$topbar-line-height: 26px;
+
+$topbar-base-color: #FFFFFF;
+$topbar-bgcolor: #037DF3;
+$topbar-color: $topbar-base-color;
+$topbar-fenge-color: darken($base-color, 10%);
+$topbar-hover-color: #FFFFFF;
+$topbar-hover-bgcolor: #0270DA;
+$topbar-active-bgcolor: #0270DA;
+$topbar-active-color: #FFFFFF;
+$topbar-selectdown-bgcolor: $base-color;
+$topbar-selectdown-color: #485566;
+$topbar-selectdown-hover-bgcolor: #4A94FA;
+$topbar-selectdown-item-hover-color: #108ffd;
+$topbar-selectdown-item-hover-bgcolor: #f3f3f3;
+
+$topbar-nav-padding: 0 24px;
+$topbar-tool-padding: 0 10px;
+
+$topbar-shadow-color: rgba(0,0,0,0.3);
+$topbar-shadow: 0 0 2px $topbar-shadow-color;
+
+$topbar-l-fonsize: 16px;
+$topbar-m-fonsize: 14px;
+$topbar-fontweight: $normal-font;
+$userinfo-text-color:#333333;
+$topbar-userInfo-menu-first-item-bg:none !important;
+$topbar-userInfo-menu-item-hover-bg:#F1F8FF !important;
+$topbar-menu-item-drag-bg-color:#fff!important;
+$topbar-sort-list-bg-color:#fff;
+$topbar-sort-list-border-color:#fff;
+$topbar-sort-item-hover-bg-color:#F3F9FF;
+$topbar-personal-border-bottom:1px solid #EFF0F3;
+$topbar-pwd-tips-color:#333333;
+$topbar-checkbox-color:#333333;
+
+/* 3.0 $sidebar */
+$sidebar-base-width: 200px;
+$sidebar-collapse-width: 60px;
+
+$sidebar-select-height: 30px;
+$sidebar-select-border: 1px solid #D7D9DA;
+$sidebar-select-opacity: 1;
+$sidebar-search-holdercolor: #979B9E;
+$sidebar-search-iconcolor:#353e48;
+$sidebar-search-hover-color:#fff;
+$sidebar-select-color: #333333;
+$sidebar-select-iconColor: #353E48;
+$sidebar-menu-lineheight: 44px;
+
+$sidebar-menu-padding1: 6px 30px 6px 18px;
+$sidebar-menu-padding2: 9px 30px 9px 40px;
+$sidebar-menu-padding3title: 9px 30px 9px 30px;
+$sidebar-menu-padding3: 9px 30px 9px 50px;
+$sidebar-menu-padding4: 4px 30px 4px 18px;
+$sidebar-menu-itemBorder: 1px #192229 solid;
+$sidebar-open-menu-bgcolor:  #F6F6F6;
+$sidebar-open-menu-color:  #192229;
+$sidebar-open-menu-hover-color:  #FFFFFF;
+
+
+$sidebar-logo-bgcolor: #037DF3;
+$sidebar-logo-color: #FFFFFF;
+
+$sidebar-search-marTop: -6px;
+
+$sidebar-hide-bgcolor: #FFFFFF;
+$sidebar-hide-bar-bgcolor: #F6F6F6;
+$sidebar-hide-bar-sec-bgcolor: #F6F6F6;
+$sidebar-hide-bar-sec-actbgcolor: #02A8F8;
+$sidebar-hide-bar-sec-color:#FFFFFF;
+$sidebar-bgcolor: #F2F2F2;
+$sidebar-bgcolor-liner: $sidebar-hide-bgcolor;
+$sidebar-webkit-bgcolor-liner: $sidebar-hide-bgcolor;
+$sidebar-color:  #192229;
+$sidebar-search-color: #192229;
+// $sidebar-select-color: transparent;
+$sidebar-hover-bgcolor: #02A8F8;
+
+$sidebar-l-fonsize: 14px;
+$sidebar-m-fonsize: 12px;
+
+$sidebar-search-opacity: 0.49;
+$sidebar-coll-item-drag-bg-color:#fff!important;
+
+/* 4.0 $navbar */
+$navbar-base-height: 32px;
+$navbar-tag-height: 32px;
+$navbar-tag-lineheight: 24px;
+
+$navbar-wrap-padding: 0px 17px;
+
+$navbar-tag-padding: 4px 9px;
+
+$navbar-bgcolor: #F7F7F7;
+$navbar-color: #171B26;
+$navbar-tag-hover-bgcolor: #4A94FA;
+
+$navbar-tag-close-right: 4px;
+$navbar-tag-close-top: 5px;
+
+$navbar-tag-close-tip-height: 100px;
+$navbar-tag-close-tip-width: 148px;
+$navbar-tag-close-tip-padding: 2px 0;
+$navbar-tag-close-tip-bgcolor: $base-color;
+$navbar-tag-close-tip-item-height: 32px;
+$navbar-tag-close-tip-item-hover-bgcolor: #4A94FA;
+$navbar-tag-close-tip-item-hover-color: $base-color;
+
+$navbar-l-fonsize: 14px;
+$navbar-m-fonsize: 13px;
+
+/* 5.0 $login */
+$loin-bgcolor: #16191E;
+
+/*h-datatree*/
+$h-datatree-search-visable-border-color:$theme-base-color;
+
+/*button*/
+$primary-color:$theme-base-color;
+$btn-primary-bg: $theme-base-color;
+
+/*h-panel*/
+$h-panel-btn-color:$theme-base-color;
+$h-panel-btn-border-color:$theme-base-color;
+$h-panel-btn-hover-color:$theme-base-color;
+$h-panel-btn-press-color:$theme-base-color;
+/*input*/
+$input-hover-border-color: $theme-base-color;
+$input-focus-border-color: $theme-base-color;
+$input-internal-autofill:#fff;
+
+/*tree*/
+$tree-selected-color:$theme-base-color;
+$tree-selected-bgcolor:#F5F5F5;
+
+/*select*/
+$select-dropdown-selected-color:$theme-base-color;
+
+/*table*/
+$table-td-hover-bg:#F6F7F8;
+$table-td-highlight-bg: #ECF7FF;
+
+/*logo*/
+$logo-bgcolor: url('../assets/logo-b.png') center center no-repeat;
+
+
+/* form */
+$form-label-color: $text-color;
+$form-item-label-text-align:right;
+$form-item-label-background:#F7F7F7;
+$form-item-label-padding: 0 8px 0 0;
+$form-item-labelWrap-padding:0 12px 0 0;
+$form-item-margin-bottom:24px;
+$form-label-top-padding:0 0 10px 0;
+$form-inline-margin-right:10px;
+$form-row-form-item-padding: 4px 0;
+$form-row-form-item-margin:0;
+$form-row-required-left:-3px;
+$form-row-required-requiredIcon-left:-9px;
+$form-error-tip-left:0;
+$form-error-tip-line-height:1;
+$form-error-tip-padding-top:6px;
+$form-required-label-before-margin-right:2px;
+$form-required-item-requiredIcon-left:-9px;
+$form-item-h-input-padding:0 12px;
+
+/*button*/
+$btn-padding-base:4px 14px;
+$btn-border-radius: 2px;
+$btn-default-border:#DDDDDD;
+$btn-default-color:#333333;
+$btn-disable-border: #EDEDED;
+$btn-disable-color: #999999;
+$btn-disable-bg: #F7F7F7;
+
+/*table*/
+$table-td-group-line-bg: #F9F9F9;
+$table-thead-bg: #F7F7F7;
+$table-td-highlight-bg: #D9EBFD;
+$table-td-hover-bg: #F3F9FF;
+// $table-after-height:0;
+$table-td-hover-bg:#F1F8FF; //new 2019-7-26
+$table-td-highlight-bg:#D9EBFD; //new 2019-7-26
+
+/*input*/
+$input-height-base: 28px;
+$form-component-height:28px;
+
+/*tabs*/
+$tabs-tab-font-size:12px;
+$tabs-nav-tab-color:#333333;
+// $tabs-tab-active-color:#037DF3;
+// $tabs-tab-hover-color:#037DF3;
+$tabs-tab-active-color:#037df3; //new 2019-7-26
+$tabs-tab-hover-color:#029AFD; //new 2019-7-26
+
+/*msgBox*/
+$mixin-content-header-color:#000000; //new 2019-7-26
+
+$msgbox-body-padding:32px 32px 16px 32px;
+$msgbox-body-font-size:12px; 
+
+
+
+
+$background-color-select-hover:#fff;
+$tree-title-hover-color:#333;
+$table-td-group-line-bg:#f7f7f7;
+$tree-arrow-i-font-size:8px;
+
+
+//公用
+$layout-menu-right-padding:20px; 
+$asyn-tree-padding:20px;
+$asyn-tree-title-font-size:14px;
+$table-small-th-height:32px;
+$table-th-td-height:28px;
+$h-table-small-boder-right:1px solid #DDDDDD;
+$table-fixed-cell-padding-left:8px;
+$table-fixed-cell-padding-right:16px;
+$h-tree-iconfont-color:#333333;
+$font-size-base:12px;
+$h-tree-arrow-icon:'\e6d0';
+$h-tree-arrow-rotate-tangle:rotate(0deg);
+$h-tree-arrow-open-icon:"\e6d1";

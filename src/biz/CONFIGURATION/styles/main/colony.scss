@@ -1,0 +1,47 @@
+// 集群管理(目前为lightblue)
+.web-colony {
+  .oper-btn {
+    padding-top: 16px;
+    box-sizing: border-box;
+  }
+}
+.lightblue .h-breadcrumb {
+  padding-bottom: 16px;
+  box-sizing: border-box;
+  .bread-title {
+    a {
+      color: #999999;
+    }
+    .h-breadcrumb-item-separator {
+      color: #E6E6E6;
+    }
+  }
+  .bread-current {
+    .h-breadcrumb-item-link {
+      color: #333333;
+    }
+  }
+} 
+.lightblue .web-colony .oper-btn .h-btn {
+  margin-right: 12px;
+  padding: 8px;
+  box-sizing: border-box;
+  .icon-android-add {
+    font-size: 12px;
+  }
+}
+.lightblue .colony-file .h-checkbox-wrapper {
+  width: 100%;
+}
+.lightblue .aplication-modal .new-file {
+  .h-input-wrapper {
+    width: 117px;
+  }
+  .h-select {
+    float: right;
+    width: 116px;
+  }
+  .h-input-small {
+    height: 28px;
+  }
+}

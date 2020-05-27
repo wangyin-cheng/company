@@ -1,0 +1,39 @@
+
+.h-notice-bar {
+    bottom: 0;
+    position: fixed;
+    left: 200px;
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    background: #fff;
+    text-align: left;
+    transition: left .2s ease-in-out;
+}
+.h-notice-bar .h-notice-bar-status {
+    display: inline-block;
+    text-align: left;
+    padding: 0 15px;
+    width: 200px;
+    float: left;
+    span{
+        vertical-align: top;
+    }
+}
+.h-notice-bar .h-notice-bar-time {
+    position: fixed;
+    display: inline-block;
+    padding: 0 15px;
+    right: 20px;
+    text-align: right;
+    span{
+        vertical-align: top;
+    }
+}
+
+.hideSidebar {
+    .h-notice-bar {
+      left: 60px;
+      transition: left .2s ease-in-out;
+    }
+  }

@@ -1,0 +1,98 @@
+// 公共(目前为lightblue)
+.web-pages {
+  padding: 16px;
+  background-color: #fff;
+  font-size: 12px;
+  font-weight: 400;
+  box-sizing: border-box;
+  .warning {
+    position: relative;
+    padding: 8px 8px 8px 34px;
+    background-color: #FFF8ED;
+    box-sizing: border-box;
+    .warn-icon {
+      position: absolute;
+      display: inline-block;
+      top: 5px;
+      left: 12px;
+      color: #F2B044;
+    }
+  }
+}
+// 选中框
+.notice-bar {
+  margin: 16px 0 12px 0;
+  padding: 0 12px;
+  height: 36px;
+  background-color: rgba(239,245,255,1);
+  border-radius: 2px;
+  box-sizing: border-box;
+}
+.icon-t-b-Warning {
+  font-size: 14px;
+  color: #4686F2;
+}
+.notice-lf {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  .notice-txt {
+    padding-left: 8px;
+    color: #434343;
+    box-sizing: border-box;
+  }
+  .notice-num {
+    color: #4F91F4;
+  }
+  .h-icon {
+    color: #4686F2;
+  }
+  .notice-clear {
+    padding-left: 8px;
+    color: #4686F2;
+    cursor: pointer;
+    box-sizing: border-box;
+  }
+}
+// 分页
+.com-page {
+  padding-top: 56px;
+  text-align: right;
+  box-sizing: border-box;
+}
+// 二次弹框
+.lightblue .h-modal-header .pop-head {
+  display: flex;
+  font-size: 14px;
+  font-weight: 500;
+  .pop-icon {
+    margin-right: 9px;
+    font-size: 18px;
+  }
+  .pop-icon .iconfont {
+    font-size: 18px;
+    color: #4686F2;
+  }
+  .pop-icon .iconfont.h-icon-success {
+    color: #1CB77B;
+  }
+  .pop-icon .iconfont.h-icon-error {
+    color: #F14C5D;
+  }
+}
+.pop-content {
+  padding: 12px 20px 20px 32px;
+  box-sizing: border-box;
+  .del-name {
+    color: #F14C5D;
+  }
+}
+input::placeholder,
+  .h-select-placeholder {
+    font-size: 12px;
+    color: #999999;
+  }
+.h-select-single .h-select-selection .h-select-placeholder {
+  font-size: 12px;
+  color: #999999;
+}

@@ -1,0 +1,114 @@
+// 应用管理(目前为lightblue)
+.web-applications { 
+  .top-bar .h-btn-gost {
+    margin-left: 12px;
+  }
+}
+.lightblue .web-applications .top-bar .h-btn .iconfont {
+  margin-left: -8px;
+  font-size: 14px;
+}
+.lightblue .h-modal-header .aplication-head {
+  font-size: 14px;
+  font-weight: 500;
+}
+.lightblue .app-station {
+  padding: 15px 19px 20px 20px;
+  font-size: 14px;
+  font-weight: 500;
+  background-color: rgba(239,245,255,1);
+  border-radius: 2px;
+  box-sizing: border-box;
+  .station-title {
+    height: 31px;
+    font-size: 0;
+  }
+  .station-title .app-com {
+    display: inline-block;
+    height: 100%;
+    vertical-align: top;
+    font-size: 14px;
+  }
+  .station-title .app-com span {
+    display: flex;
+    padding-left: 9px;
+    height: 100%;
+    align-items: center;
+    box-sizing: border-box;
+  }
+  .app-lf .h-icon {
+    font-size: 21px;
+    color: #4686F2;
+  }
+  .app-rt {
+    float: right;
+    font-size: 16px;
+    color: #999;
+    cursor: pointer;
+  }
+  .app-content {
+    padding: 2px 0 0 30px;
+    line-height: 20px;
+    font-size: 12px;
+    color: #333333;
+    font-weight: 400;
+    box-sizing: border-box;
+  }
+}
+.lightblue .aplication-form {
+  padding: 24px 69px 1px 0;
+  box-sizing: border-box;
+  .h-form-item-label {
+    padding-right: 12px;
+    background-color: #fff;
+    font-weight: 400;
+    box-sizing: border-box;
+  }
+  .h-form-item {
+    margin-bottom: 12px;
+    box-sizing: border-box;
+  }
+  
+  // 配置文件
+  .aplication-file {
+    .file-all {
+      margin-bottom: 6px;
+    }
+    .h-checkbox-group-item {
+      margin-bottom: 2px;
+      width: 100%;
+    }
+  }
+  .aplication-set {
+    position: relative;
+    display: inline-block;
+    margin-left: -12px;
+    width: 100%;
+    .set1 {
+      width: 152px;
+    }
+    .set2 {
+      width: 181px;
+    }
+    .set3 {
+      width: 207px;
+    }
+  }
+  .point-add {
+    position: absolute;
+    right: -12px;
+    bottom: 12px;
+    width: 52px;
+    .h-btn {
+      padding: 6px 13px;
+      box-sizing: border-box;
+    }
+  }
+  .file-table {
+    margin-bottom: 12px;
+  }
+}
+.lightblue .init-form {
+  padding-right: 16px;
+  box-sizing: border-box;
+}
