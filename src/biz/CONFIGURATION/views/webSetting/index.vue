@@ -474,6 +474,7 @@ export default {
           )
         ]);
       };
+      
     },
     // 全选的配置
     handleCheckAll() {

@@ -6,13 +6,13 @@ var webBar = baseUrl + 'query'
 var column1 = [
   {
     title: 'id',
-    key: 'index',
-    width: 60
+    key: 'user_id',
+    width: 100
   },
   {
     title: '用户名',
-    key: 'name',
-    minWidth: 130
+    key: 'user_name',
+    minWidth: 100
   },
   {
     title: '邮箱',
@@ -21,13 +21,13 @@ var column1 = [
   },
   {
     title: '超级管理员',
-    key: 'super',
-    minWidth: 180
+    key: 'user_type',
+    minWidth: 160
   },
   {
     title: '账号状态',
-    key: 'status',
-    minWidth: 100
+    key: 'user_status',
+    minWidth: 80
   },
   {
     title: '操作',
@@ -42,12 +42,12 @@ var column2 = [
   },
   {
     title: '部门id',
-    key: 'id',
+    key: 'org_id',
     width: 100
   },
   {
     title: '部门名称',
-    key: 'name',
+    key: 'org_name',
     minWidth: 130
   },
   {

@@ -335,6 +335,28 @@ window.LOCAL_CONFIG = {
           children: null,
           is_keep_alivea: true,
         },
+        {
+          url: '/CONFIGURATION/views/webHistory/index',
+          kind_code: 'CONFIGURATION',
+          app_code: 'CONFIGURATION',
+          id: 'webHistory',  //对应路由router的模块
+          title: '历史',
+          parent_id: 'new-configuration',
+          icon: 'home',
+          children: null,
+          is_keep_alivea: true,
+        },
+        {
+          url: '/CONFIGURATION/views/webSync/index',
+          kind_code: 'CONFIGURATION',
+          app_code: 'CONFIGURATION',
+          id: 'webSync',  //对应路由router的模块
+          title: '同步配置',
+          parent_id: 'new-configuration',
+          icon: 'home',
+          children: null,
+          is_keep_alivea: true,
+        },
       ]
     }
   ]

@@ -45,14 +45,14 @@ let column = [
         key: 'create',
         align: 'center',
         sortable: true,
-        minWidth: 160
+        minWidth: 100
       },
       {
         title: '更新时间',
         key: 'update',
         align: 'center',
         sortable: true,
-        minWidth: 160
+        minWidth: 100
       },
       {
         title: '操作',

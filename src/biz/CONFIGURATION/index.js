@@ -4,6 +4,10 @@ import './styles/main/colony.scss'
 import './styles/main/setting.scss'
 import './styles/main/common.scss'
 
+import fetchApi from './Common-Components/ucpFetch'
+
+
+fetchApi.createUcpFetch()
 export default {
   router: {
     "webSys": () =>
@@ -30,6 +34,16 @@ export default {
       import(
         /* webpackChunkName: "configuration/views/webSetting/index" */
         `@configuration/views/webSetting/index`
+      ),
+      "webHistory": () =>
+      import(
+        /* webpackChunkName: "configuration/views/webHistory/index" */
+        `@configuration/views/webHistory/index`
+      ),
+      "webSync": () =>
+      import(
+        /* webpackChunkName: "configuration/views/webSync/index" */
+        `@configuration/views/webSync/index`
       )
   },
   i18n: false
